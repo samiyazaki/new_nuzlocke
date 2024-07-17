@@ -35,12 +35,25 @@
                 <th>Actions</th>
             </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+            <tr>
+                <td>Bulbasaur</td>
+                <td>Grass</td>
+                <td>5</td>
+                <td>Alive</td>
+                <td>
+                    <button onclick="editPokemon('Bulbasaur')"><span>Edit</span></button>
+                    <button onclick="deletePokemon('Bulbasaur')"><span>Delete</span></button>
+                </td>
+            </tr>
+        </tbody>
     </table>
 
     <!-- List to display the badges -->
     <h2>Badges:</h2>
-    <ul id="badges"></ul>
+    <ul id="badges">
+        <li>Boulder Badge <button onclick="editBadge('Boulder Badge')"><span>Edit</span></button> <button onclick="deleteBadge('Boulder Badge')"><span>Delete</span></button></li>
+    </ul>
 
     <!-- Form to add a new badge -->
     <form onsubmit="event.preventDefault(); addBadge();">

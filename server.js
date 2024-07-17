@@ -1,8 +1,9 @@
 const express = require('express');
 const path = require('path');
-const cors = require('cors');
+const cors = require('cors'); // Import cors
 const app = express();
 
+app.use(cors()); // Enable CORS
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -43,7 +44,6 @@ app.put('/edit_pokemon', (req, res) => {
         res.json({ success: false });
     }
 });
-
 
 app.delete('/delete_badge', (req, res) => {
     const index = badges.indexOf(req.body.badge);

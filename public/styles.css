@@ -1,21 +1,182 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
 }
+
 h1, h2 {
     color: #333;
+    text-align: center;
+    margin-bottom: 20px;
 }
+
+h1 {
+    color: #e51b23; /* Red for Pokemon theme */
+}
+
+form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label, input, select {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #e51b23;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #c3181c;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-bottom: 20px;
 }
+
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
+    text-align: center;
 }
+
 th {
-    background-color: #f2f2f2;
+    background-color: #f7f7f7;
+    color: #333;
 }
-form {
-    margin-bottom: 20px;
+
+td button {
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin: 5px;
+}
+
+td button:before, td button:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+}
+
+td button:before {
+    top: 0;
+    background-color: #fff;
+    border-bottom: 2px solid #333;
+}
+
+td button:after {
+    bottom: 0;
+    background-color: #e51b23;
+    border-top: 2px solid #333;
+}
+
+td button:hover {
+    transform: scale(1.1);
+}
+
+td button span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    font-weight: bold;
+    color: #333;
+    z-index: 2; /* Ensure text is above the button design */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+ul li {
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+}
+
+ul li button {
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+ul li button:before, ul li button:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+}
+
+ul li button:before {
+    top: 0;
+    background-color: #fff;
+    border-bottom: 2px solid #333;
+}
+
+ul li button:after {
+    bottom: 0;
+    background-color: #e51b23;
+    border-top: 2px solid #333;
+}
+
+ul li button:hover {
+    transform: scale(1.1);
+}
+
+ul li button span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    font-weight: bold;
+    color: #333;
+    z-index: 2; /* Ensure text is above the button design */
 }
