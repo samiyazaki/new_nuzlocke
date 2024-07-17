@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokemon Nuzlocke Tracker</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body onload="refreshTeam(); refreshBadges();">
+    <h1>Pokemon Nuzlocke Tracker</h1>
+
+    <!-- Form to add a new Pokemon -->
+    <form onsubmit="event.preventDefault(); addPokemon();">
+        <label for="nickname">Nickname:</label><br>
+        <input type="text" id="nickname" name="nickname" required><br>
+        <label for="type">Type:</label><br>
+        <input type="text" id="type" name="type" required><br>
+        <label for="level">Level:</label><br>
+        <input type="number" id="level" name="level" required><br>
+        <label for="status">Status:</label><br>
+        <select id="status" name="status">
+            <option value="Alive">Alive</option>
+            <option value="Fainted">Fainted</option>
+        </select><br>
+        <input type="submit" value="Add Pokemon">
+    </form>
+
+    <!-- Table to display the team -->
+    <h2>Pokemon Team:</h2>
+    <table id="team">
+        <thead>
+            <tr>
+                <th>Nickname</th>
+                <th>Type</th>
+                <th>Level</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- List to display the badges -->
+    <h2>Badges:</h2>
+    <ul id="badges"></ul>
+
+    <!-- Form to add a new badge -->
+    <form onsubmit="event.preventDefault(); addBadge();">
+        <label for="badge">Badge:</label><br>
+        <input type="text" id="badge" name="badge" required><br>
+        <input type="submit" value="Add Badge">
+    </form>
+
+    <script src="main.js"></script>
+</body>
+</html>
